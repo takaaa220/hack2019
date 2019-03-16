@@ -3,6 +3,6 @@ class SessionsController < ApplicationController
     auth = request.env['omniauth.auth']
     user = User.create_or_find_with_twitter(auth)
 
-    res(user&.res_model)
+    render json: { status: 200, data: user&.res_model }
   end
 end
