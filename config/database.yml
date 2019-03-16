@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: hack2019_production
+  database: <%= ENV['DATABASE_URL'] %>
   username: hack2019
   password: <%= ENV['HACK2019_DATABASE_PASSWORD'] %>
