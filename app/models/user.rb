@@ -1,5 +1,8 @@
 class User < ApplicationRecord
   has_many :shops, dependent: :destroy
+  validates :name, presence: true
+  validates :username, presence: true
+  validates :uid, presence: true
 
   def self.create_or_find_with_twitter(auth)
     user = User.find_by(uid: auth.uid)
