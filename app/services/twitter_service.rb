@@ -11,10 +11,10 @@ class TwitterService
   TWITTER_CREATE_DM_ENDPOINT  = "#{TWITTER_API_DOMAIN}/1.1/direct_messages/events/new.json"
   TWITTER_SIGNATURE_METHOD    = "HMAC-SHA1"
   TWITTER_OAUTH_VERSION       = "1.0"
-  TWITTER_CONSUMER_KEY        = ENV.fetch("TWITTER_CONSUMER_KEY")
-  TWITTER_CONSUMER_SECRET     = ENV.fetch("TWITTER_CONSUMER_SECRET")
-  TWITTER_ACCESS_TOKEN        = ENV.fetch("TWITTER_ACCESS_TOKEN")
-  TWITTER_ACCESS_TOKEN_SECRET = ENV.fetch("TWITTER_ACCESS_TOKEN_SECRET")
+  TWITTER_CONSUMER_KEY = Rails.application.credentials.twitter[:key]
+  TWITTER_CONSUMER_SECRET = Rails.application.credentials.twitter[:secret_key]
+  TWITTER_ACCESS_TOKEN = Rails.application.credentials.twitter[:token]
+  TWITTER_ACCESS_TOKEN_SECRET = Rails.application.credentials.twitter[:secret_token]
 
   def initialize(user_id, text)
     @user_id = user_id
