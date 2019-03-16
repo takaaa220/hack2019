@@ -29,6 +29,7 @@ gem 'api-pagination'
 gem 'pagy'
 gem 'kaminari'
 gem 'will_paginate'
+gem 'omniauth-twitter'
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
