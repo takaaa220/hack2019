@@ -26,6 +26,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'rack-cors'
 gem 'api-pagination'
+gem 'pagy'
+gem 'kaminari'
+gem 'will_paginate'
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
